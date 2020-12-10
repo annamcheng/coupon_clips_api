@@ -1,0 +1,246 @@
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8698.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coupon_clips_api_development"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "coupon_clips_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "coupon_clips_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8635.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coupon_clips_api_development"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (81.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coupon_clips_api_development"[0m
+  [1m[35m (117.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coupon_clips_api_test"[0m
+  [1m[35m (15460.0ms)[0m  [1m[35mCREATE DATABASE "coupon_clips_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (6557.7ms)[0m  [1m[35mCREATE DATABASE "coupon_clips_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (129.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (164.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2846383764031633350)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVendors (20201210053852)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.2ms)[0m  [1m[35mCREATE TABLE "vendors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201210053852"]]
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSavings (20201210054025)
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (129.1ms)[0m  [1m[35mCREATE TABLE "savings" ("id" bigserial primary key, "original_cost" decimal(8,2), "savings_cost" decimal(8,2), "discount" decimal(4,2), "month" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201210054025"]]
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-10 05:42:37.459713"], ["updated_at", "2020-12-10 05:42:37.459713"]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2846383764031633350)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2846383764031633350)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToSavings (20201210054441)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "savings" ADD "vendor_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201210054441"]]
+  [1m[36mTRANSACTION (40.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2846383764031633350)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2846383764031633350)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToSavings (20201210054441)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "savings" DROP COLUMN "vendor_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201210054441"]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2846383764031633350)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2846383764031633350)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSavings (20201210054025)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (127.5ms)[0m  [1m[35mDROP TABLE "savings"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201210054025"]]
+  [1m[36mTRANSACTION (43.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2846383764031633350)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2846383764031633350)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVendors (20201210053852)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "vendors"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201210053852"]]
+  [1m[36mTRANSACTION (50.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2846383764031633350)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2846383764031633350)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVendors (20201210053852)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (133.8ms)[0m  [1m[35mCREATE TABLE "vendors" ("id" bigserial primary key, "name" character varying)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201210053852"]]
+  [1m[36mTRANSACTION (71.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSavings (20201210054025)
+  [1m[36mTRANSACTION (45.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[35mCREATE TABLE "savings" ("id" bigserial primary key, "original_cost" decimal(8,2), "savings_cost" decimal(8,2), "discount" decimal(4,2), "month" character varying)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201210054025"]]
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeyToSavings (20201210054441)
+  [1m[36mTRANSACTION (41.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "savings" ADD "vendor_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201210054441"]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2846383764031633350)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Create (1.0ms)[0m  [1m[32mINSERT INTO "vendors" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Home Depot"]]
+  [1m[36mTRANSACTION (81.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Create (0.3ms)[0m  [1m[32mINSERT INTO "vendors" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Bed Bath and Beyond"]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Create (0.5ms)[0m  [1m[32mINSERT INTO "vendors" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Guitar Center"]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Create (0.5ms)[0m  [1m[32mINSERT INTO "vendors" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Tory Burch"]]
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Create (0.3ms)[0m  [1m[32mINSERT INTO "vendors" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Walgreens"]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.8ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "200.0"], ["savings_cost", "170.0"], ["discount", "0.15"], ["month", "Jan"], ["vendor_id", 1]]
+  [1m[36mTRANSACTION (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.4ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.4ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "540.23"], ["savings_cost", "432.18"], ["discount", "0.2"], ["month", "Jan"], ["vendor_id", 1]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.4ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.4ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "1500.0"], ["savings_cost", "1050.0"], ["discount", "0.3"], ["month", "Jan"], ["vendor_id", 4]]
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.6ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "400.0"], ["savings_cost", "320.0"], ["discount", "0.2"], ["month", "Feb"], ["vendor_id", 1]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.7ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "50.0"], ["savings_cost", "25.0"], ["discount", "0.5"], ["month", "Feb"], ["vendor_id", 2]]
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.5ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "100.5"], ["savings_cost", "90.45"], ["discount", "0.1"], ["month", "Mar"], ["vendor_id", 3]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.5ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "178.35"], ["savings_cost", "124.85"], ["discount", "0.3"], ["month", "Mar"], ["vendor_id", 4]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "2468.9"], ["savings_cost", "1851.68"], ["discount", "0.25"], ["month", "Apr"], ["vendor_id", 2]]
+  [1m[36mTRANSACTION (41.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "169.99"], ["savings_cost", "118.99"], ["discount", "0.3"], ["month", "Apr"], ["vendor_id", 3]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSaving Create (1.6ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "430.12"], ["savings_cost", "365.6"], ["discount", "0.15"], ["month", "May"], ["vendor_id", 4]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.1ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "563.29"], ["savings_cost", "461.9"], ["discount", "0.18"], ["month", "May"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "82.35"], ["savings_cost", "72.47"], ["discount", "0.12"], ["month", "Jun"], ["vendor_id", 3]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.4ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "34.67"], ["savings_cost", "17.34"], ["discount", "0.5"], ["month", "Jun"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.4ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "87.88"], ["savings_cost", "70.3"], ["discount", "0.2"], ["month", "Jul"], ["vendor_id", 2]]
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.4ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.7ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "214.56"], ["savings_cost", "160.92"], ["discount", "0.25"], ["month", "Jul"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.6ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "56.78"], ["savings_cost", "51.1"], ["discount", "0.1"], ["month", "Aug"], ["vendor_id", 4]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.4ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "44.55"], ["savings_cost", "37.87"], ["discount", "0.15"], ["month", "Aug"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "21.34"], ["savings_cost", "14.94"], ["discount", "0.3"], ["month", "Sept"], ["vendor_id", 2]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.6ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "99.67"], ["savings_cost", "69.77"], ["discount", "0.3"], ["month", "Sept"], ["vendor_id", 4]]
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "51.67"], ["savings_cost", "41.34"], ["discount", "0.2"], ["month", "Oct"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (1.5ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "87.32"], ["savings_cost", "65.49"], ["discount", "0.25"], ["month", "Nov"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (42.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (1.9ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.5ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "100.0"], ["savings_cost", "90.0"], ["discount", "0.1"], ["month", "Dec"], ["vendor_id", 1]]
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "215.05"], ["savings_cost", "172.04"], ["discount", "0.2"], ["month", "Dec"], ["vendor_id", 2]]
+  [1m[36mTRANSACTION (42.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "51.45"], ["savings_cost", "25.73"], ["discount", "0.5"], ["month", "Dec"], ["vendor_id", 3]]
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.5ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "77.1"], ["savings_cost", "30.84"], ["discount", "0.6"], ["month", "Dec"], ["vendor_id", 4]]
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVendor Load (0.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSaving Create (0.4ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "54.0"], ["savings_cost", "47.52"], ["discount", "0.12"], ["month", "Dec"], ["vendor_id", 5]]
+  [1m[36mTRANSACTION (41.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (203.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "savings"[0m
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/vendors/1" for ::1 at 2020-12-10 00:49:07 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VendorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVendor Load (0.7ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vendors_controller.rb:44:in `set_vendor'
+  [1m[36mSaving Load (0.6ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 1]]
+  ↳ app/controllers/vendors_controller.rb:12:in `show'
+Completed 200 OK in 61ms (Views: 0.1ms | ActiveRecord: 13.7ms | Allocations: 14097)
+
+
