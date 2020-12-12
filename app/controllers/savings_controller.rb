@@ -16,9 +16,11 @@ class SavingsController < ApplicationController
   def create
     @saving = Saving.new(saving_params)
     @saving.vendor_id = params[:vendor_id]
+    puts @saving
     if @saving.save
       render json: @saving, status: :created, location: @saving
     else
+      puts @saving.errors.messages
       render json: @saving.errors, status: :unprocessable_entity
     end
   end
@@ -46,6 +48,6 @@ class SavingsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def saving_params
-    params.require(:saving).permit(:original_cost, :savings_cost, :discount, :month)
+    params.require(:saving).permit(:original_cost, :savings_cost, :discount, :month, :vendor_id)
   end
 end

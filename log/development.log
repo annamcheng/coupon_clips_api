@@ -1976,3 +1976,113 @@ Completed 200 OK in 84ms (Views: 0.3ms | ActiveRecord: 49.1ms | Allocations: 649
 
 
   [1m[36mVendor Load (1.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/savings" for ::1 at 2020-12-12 14:30:04 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SavingsController#index as HTML
+  [1m[36mSaving Load (2.1ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 178ms (Views: 99.2ms | ActiveRecord: 39.4ms | Allocations: 9288)
+
+
+Started POST "/savings" for ::1 at 2020-12-12 14:30:56 -0500
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"999.99", "discount"=>"0.0", "savings_cost"=>"999.99", "month"=>"Feb", "saving"=>{"original_cost"=>"999.99", "savings_cost"=>"999.99", "discount"=>"0.0", "month"=>"Feb"}}
+Completed 422 Unprocessable Entity in 49ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 6069)
+
+
+Started POST "/savings" for ::1 at 2020-12-12 14:33:30 -0500
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"111.11", "discount"=>"0.0", "savings_cost"=>"111.11", "month"=>"Jan", "saving"=>{"original_cost"=>"111.11", "savings_cost"=>"111.11", "discount"=>"0.0", "month"=>"Jan"}}
+Completed 422 Unprocessable Entity in 39ms (Views: 2.1ms | ActiveRecord: 11.9ms | Allocations: 3582)
+
+
+Started POST "/savings" for ::1 at 2020-12-12 14:34:11 -0500
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"111.11", "discount"=>"0.0", "savings_cost"=>"111.11", "month"=>"Jan", "saving"=>{"original_cost"=>"111.11", "savings_cost"=>"111.11", "discount"=>"0.0", "month"=>"Jan"}}
+Completed 422 Unprocessable Entity in 31ms (Views: 1.6ms | ActiveRecord: 18.8ms | Allocations: 3870)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 14:39:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/vendors/1/savings" for ::1 at 2020-12-12 14:45:32 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/vendors/1/savings"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 14:46:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/savings" for ::1 at 2020-12-12 14:48:46 -0500
+Processing by SavingsController#index as HTML
+  [1m[36mSaving Load (1.0ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 64ms (Views: 59.2ms | ActiveRecord: 20.6ms | Allocations: 8173)
+
+
+Started GET "/vendors" for ::1 at 2020-12-12 14:48:53 -0500
+Processing by VendorsController#index as HTML
+  [1m[36mVendor Load (43.4ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors"[0m
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 1]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.6ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 2]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.6ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 3]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.6ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 4]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 5]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+Completed 200 OK in 95ms (Views: 0.2ms | ActiveRecord: 59.9ms | Allocations: 9740)
+
+
+Started POST "/vendors/[object%20HTMLFormElement]" for ::1 at 2020-12-12 14:57:43 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/vendors/[object%20HTMLFormElement]"):
+  
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:18:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/1/savings"):
+  
+Started GET "/vendors/" for ::1 at 2020-12-12 15:18:39 -0500
+Processing by VendorsController#index as HTML
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors"[0m
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 1]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 2]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.2ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 3]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 4]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 5]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+Completed 200 OK in 72ms (Views: 0.1ms | ActiveRecord: 10.5ms | Allocations: 8869)
+
+
+Started GET "/vendors/1" for ::1 at 2020-12-12 15:18:41 -0500
+Processing by VendorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vendors_controller.rb:44:in `set_vendor'
+  [1m[36mSaving Load (0.2ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 1]]
+  ↳ app/controllers/vendors_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1688)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 15:28:45 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:32:50 -0500
+Processing by SavingsController#index as HTML
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.7ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 47ms (Views: 23.8ms | ActiveRecord: 7.7ms | Allocations: 9311)
+
+
