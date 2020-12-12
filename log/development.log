@@ -1975,3 +1975,4 @@ Processing by VendorsController#index as */*
 Completed 200 OK in 84ms (Views: 0.3ms | ActiveRecord: 49.1ms | Allocations: 6493)
 
 
+  [1m[36mVendor Load (1.3ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
