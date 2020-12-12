@@ -3,6 +3,7 @@ class SavingsController < ApplicationController
 
   # GET /savings
   def index
+    puts params
     @savings = Saving.where(vendor_id: params[:vendor_id]).order(id: :desc)
     render json: @savings
   end
@@ -19,7 +20,6 @@ class SavingsController < ApplicationController
     @saving.vendor = vendor
     puts @saving
     if @saving.save
-      puts "Anna"
       render json: @saving, status: :created
     else
       puts @saving.errors.messages
