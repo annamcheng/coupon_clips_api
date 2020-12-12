@@ -2086,3 +2086,188 @@ Processing by SavingsController#index as HTML
 Completed 200 OK in 47ms (Views: 23.8ms | ActiveRecord: 7.7ms | Allocations: 9311)
 
 
+Started POST "/vendors/1/savings" for ::1 at 2020-12-12 15:38:42 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"111.11", "discount"=>"0.0", "savings_cost"=>"111.11", "month"=>"Jan", "vendor_id"=>"1", "saving"=>{"original_cost"=>"111.11", "savings_cost"=>"111.11", "discount"=>"0.0", "month"=>"Jan", "vendor_id"=>"1"}}
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/savings_controller.rb:20:in `create'
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/savings_controller.rb:20:in `create'
+  [1m[36mSaving Create (45.5ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "111.11"], ["savings_cost", "111.11"], ["discount", "0.0"], ["month", "Jan"], ["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/savings_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 98.4ms | Allocations: 12673)
+
+
+  
+NoMethodError (undefined method `saving_url' for #<SavingsController:0x00000000006f68>):
+  
+app/controllers/savings_controller.rb:21:in `create'
+Started POST "/vendors/1/savings" for ::1 at 2020-12-12 15:51:37 -0500
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"111.11", "discount"=>"0.0", "savings_cost"=>"111.11", "month"=>"Jan", "vendor_id"=>"1", "saving"=>{"original_cost"=>"111.11", "savings_cost"=>"111.11", "discount"=>"0.0", "month"=>"Jan", "vendor_id"=>"1"}}
+  [1m[36mVendor Load (0.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/savings_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+  [1m[36mSaving Create (0.8ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "111.11"], ["savings_cost", "111.11"], ["discount", "0.0"], ["month", "Jan"], ["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 91.8ms | Allocations: 7303)
+
+
+  
+NoMethodError (undefined method `saving_url' for #<SavingsController:0x00000000008110>):
+  
+app/controllers/savings_controller.rb:23:in `create'
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:52:52 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.6ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 3420)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:52:52 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 3330)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:52:55 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 3309)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:52:55 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (1.6ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.6ms | Allocations: 3330)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:53:06 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (1.1ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 1.1ms | Allocations: 3309)
+
+
+Started POST "/vendors/1/savings" for ::1 at 2020-12-12 15:53:15 -0500
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"111.11", "discount"=>"0.0", "savings_cost"=>"111.11", "month"=>"Jan", "vendor_id"=>"1", "saving"=>{"original_cost"=>"111.11", "savings_cost"=>"111.11", "discount"=>"0.0", "month"=>"Jan", "vendor_id"=>"1"}}
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/savings_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+  [1m[36mSaving Create (0.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "111.11"], ["savings_cost", "111.11"], ["discount", "0.0"], ["month", "Jan"], ["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (39.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 40.1ms | Allocations: 3358)
+
+
+  
+NoMethodError (undefined method `saving_url' for #<SavingsController:0x00000000008368>):
+  
+app/controllers/savings_controller.rb:23:in `create'
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:53:15 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 3404)
+
+
+  [1m[36mSaving Load (0.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings" ORDER BY "savings"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "savings"[0m
+Started POST "/vendors/1/savings" for ::1 at 2020-12-12 15:57:00 -0500
+Processing by SavingsController#create as */*
+  Parameters: {"original_cost"=>"222.22", "discount"=>"0.0", "savings_cost"=>"222.22", "month"=>"Apr", "vendor_id"=>"1", "saving"=>{"original_cost"=>"222.22", "savings_cost"=>"222.22", "discount"=>"0.0", "month"=>"Apr", "vendor_id"=>"1"}}
+  [1m[36mVendor Load (0.2ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/savings_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+  [1m[36mSaving Create (40.3ms)[0m  [1m[32mINSERT INTO "savings" ("original_cost", "savings_cost", "discount", "month", "vendor_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["original_cost", "222.22"], ["savings_cost", "222.22"], ["discount", "0.0"], ["month", "Apr"], ["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/savings_controller.rb:21:in `create'
+Completed 201 Created in 62ms (Views: 0.4ms | ActiveRecord: 56.0ms | Allocations: 6166)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:57:00 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3515)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "savings"[0m
+  [1m[36mSaving Load (0.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings" ORDER BY "savings"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:57:35 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 3501)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:59:41 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 3501)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:59:41 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 3501)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:59:42 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (1.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.5ms | Allocations: 3501)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:59:42 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 3501)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:59:46 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1"}
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 15:59:46 -0500
+  [1m[36mSaving Load (12.2ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+Processing by SavingsController#index as */*
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 5.5ms | ActiveRecord: 12.2ms | Allocations: 4143)
+
+
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (1.0ms)[0m  [1m[34mSELECT "savings".* FROM "savings"[0m
+  ↳ app/controllers/savings_controller.rb:7:in `index'
+Completed 200 OK in 67ms (Views: 56.7ms | ActiveRecord: 10.5ms | Allocations: 5688)
+
+

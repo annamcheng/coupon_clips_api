@@ -15,10 +15,12 @@ class SavingsController < ApplicationController
   # POST /savings
   def create
     @saving = Saving.new(saving_params)
-    @saving.vendor_id = params[:vendor_id]
+    vendor = Vendor.find(params[:vendor_id])
+    @saving.vendor = vendor
     puts @saving
     if @saving.save
-      render json: @saving, status: :created, location: @saving
+      puts "Anna"
+      render json: @saving, status: :created
     else
       puts @saving.errors.messages
       render json: @saving.errors, status: :unprocessable_entity
