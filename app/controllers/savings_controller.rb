@@ -3,7 +3,7 @@ class SavingsController < ApplicationController
 
   # GET /savings
   def index
-    @savings = Saving.all
+    @savings = Saving.where(vendor_id: params[:vendor_id]).order(id: :desc)
     render json: @savings
   end
 
