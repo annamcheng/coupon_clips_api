@@ -2373,3 +2373,198 @@ Started GET "/vendors/1/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 1
   
 ActionController::RoutingError (No route matches [GET] "/vendors/1/babel/parser/lib/index.js"):
   
+Started GET "/vendors/1/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 18:56:58 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/1/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/2/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 18:59:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/2/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/2/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:03:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/2/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/2/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:03:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/2/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/2/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:03:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/2/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/2/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:03:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/2/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/2/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:03:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/2/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/1/savings" for 127.0.0.1 at 2020-12-12 19:04:50 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1", "saving"=>{}}
+  [1m[36mSaving Load (40.5ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1 ORDER BY "savings"."id" DESC[0m  [["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:8:in `index'
+Completed 200 OK in 60ms (Views: 8.0ms | ActiveRecord: 99.8ms | Allocations: 6291)
+
+
+Started DELETE "/vendors/1/savings/29" for 127.0.0.1 at 2020-12-12 19:04:58 -0500
+Processing by SavingsController#destroy as */*
+  Parameters: {"vendor_id"=>"1", "id"=>"29", "saving"=>{}}
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/savings_controller.rb:48:in `set_saving'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/savings_controller.rb:41:in `destroy'
+  [1m[36mSaving Destroy (0.5ms)[0m  [1m[31mDELETE FROM "savings" WHERE "savings"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/savings_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (85.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/savings_controller.rb:41:in `destroy'
+Completed 204 No Content in 94ms (ActiveRecord: 86.6ms | Allocations: 1939)
+
+
+Started GET "/vendors/1/savings" for 127.0.0.1 at 2020-12-12 19:05:04 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1", "saving"=>{}}
+  [1m[36mSaving Load (1.2ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1 ORDER BY "savings"."id" DESC[0m  [["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.2ms | Allocations: 1313)
+
+
+Started GET "/vendors/1/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:05:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/1/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 19:06:10 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1", "saving"=>{}}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1 ORDER BY "savings"."id" DESC[0m  [["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1290)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 19:06:19 -0500
+Processing by SavingsController#index as HTML
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1 ORDER BY "savings"."id" DESC[0m  [["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1305)
+
+
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 19:06:40 -0500
+Processing by SavingsController#index as HTML
+  Parameters: {"vendor_id"=>"1"}
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1 ORDER BY "savings"."id" DESC[0m  [["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1284)
+
+
+Started GET "/vendors/1/savings/28" for ::1 at 2020-12-12 19:10:51 -0500
+Processing by SavingsController#show as */*
+  Parameters: {"vendor_id"=>"1", "id"=>"28", "saving"=>{}}
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/savings_controller.rb:48:in `set_saving'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 603)
+
+
+Started GET "/vendors" for ::1 at 2020-12-12 19:13:24 -0500
+Processing by VendorsController#index as */*
+  Parameters: {"vendor"=>{}}
+  [1m[36mVendor Load (48.5ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors"[0m
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 1]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 2]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 3]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 4]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 5]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+Completed 200 OK in 78ms (Views: 0.2ms | ActiveRecord: 60.3ms | Allocations: 9534)
+
+
+Started GET "/vendors/savings" for ::1 at 2020-12-12 19:13:34 -0500
+Processing by VendorsController#show as */*
+  Parameters: {"id"=>"savings", "vendor"=>{}}
+  [1m[36mVendor Load (2.1ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vendors_controller.rb:44:in `set_vendor'
+Completed 404 Not Found in 10ms (ActiveRecord: 2.1ms | Allocations: 599)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vendor with 'id'=savings):
+  
+app/controllers/vendors_controller.rb:44:in `set_vendor'
+Started GET "/vendors/1/savings" for ::1 at 2020-12-12 19:13:39 -0500
+Processing by SavingsController#index as */*
+  Parameters: {"vendor_id"=>"1", "saving"=>{}}
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1 ORDER BY "savings"."id" DESC[0m  [["vendor_id", 1]]
+  ↳ app/controllers/savings_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1312)
+
+
+Started GET "/vendors/" for ::1 at 2020-12-12 19:21:28 -0500
+Processing by VendorsController#index as */*
+  Parameters: {"vendor"=>{}}
+  [1m[36mVendor Load (0.9ms)[0m  [1m[34mSELECT "vendors".* FROM "vendors"[0m
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.8ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 1]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.3ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 2]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 3]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.2ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 4]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+  [1m[36mSaving Load (0.4ms)[0m  [1m[34mSELECT "savings".* FROM "savings" WHERE "savings"."vendor_id" = $1[0m  [["vendor_id", 5]]
+  ↳ app/controllers/vendors_controller.rb:7:in `index'
+Completed 200 OK in 83ms (Views: 0.3ms | ActiveRecord: 58.5ms | Allocations: 8813)
+
+
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:24:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:32:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:32:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:33:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:33:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:33:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:33:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:34:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:34:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:36:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  
+Started GET "/vendors/babel/parser/lib/index.js" for 127.0.0.1 at 2020-12-12 19:54:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vendors/babel/parser/lib/index.js"):
+  

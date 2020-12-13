@@ -18,7 +18,6 @@ class SavingsController < ApplicationController
     @saving = Saving.new(saving_params)
     vendor = Vendor.find(params[:vendor_id])
     @saving.vendor = vendor
-    puts @saving
     if @saving.save
       render json: @saving, status: :created
     else
